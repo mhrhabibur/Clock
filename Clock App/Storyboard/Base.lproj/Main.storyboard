@@ -97,15 +97,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJA-e2-OPt">
-                                <rect key="frame" x="98.666666666666686" y="396" width="196" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJA-e2-OPt">
+                                <rect key="frame" x="98.333333333333329" y="396" width="196.33333333333337" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ve-WL-mRW">
+                                <rect key="frame" x="98.333333333333329" y="656" width="196.33333333333337" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="erZ-Sd-i44"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QCV-Ob-7tl"/>
                         <constraints>
+                            <constraint firstItem="2Ve-WL-mRW" firstAttribute="centerX" secondItem="QCV-Ob-7tl" secondAttribute="centerX" id="74F-Gl-rs3"/>
+                            <constraint firstItem="2Ve-WL-mRW" firstAttribute="width" secondItem="hc0-au-q0G" secondAttribute="width" multiplier="0.5" id="7IG-LD-ClA"/>
+                            <constraint firstItem="QCV-Ob-7tl" firstAttribute="bottom" secondItem="2Ve-WL-mRW" secondAttribute="bottom" constant="63" id="Ieb-zF-bsQ"/>
+                            <constraint firstItem="2Ve-WL-mRW" firstAttribute="centerX" secondItem="hc0-au-q0G" secondAttribute="centerX" id="LhO-0l-tpL"/>
+                            <constraint firstItem="2Ve-WL-mRW" firstAttribute="trailing" secondItem="tJA-e2-OPt" secondAttribute="trailing" id="NOb-Uk-b5c"/>
+                            <constraint firstItem="2Ve-WL-mRW" firstAttribute="top" relation="lessThanOrEqual" secondItem="tJA-e2-OPt" secondAttribute="bottom" constant="200" id="W4c-f9-WWR"/>
                             <constraint firstItem="tJA-e2-OPt" firstAttribute="centerY" secondItem="hc0-au-q0G" secondAttribute="centerY" id="lcj-Jt-A0t"/>
                             <constraint firstItem="tJA-e2-OPt" firstAttribute="centerX" secondItem="hc0-au-q0G" secondAttribute="centerX" id="sTk-su-3Sm"/>
                         </constraints>
@@ -115,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKq-3I-BsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3233" y="204"/>
+            <point key="canvasLocation" x="3232.8244274809158" y="203.52112676056339"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="aas-ej-Tpt">
@@ -126,7 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-ec-46P">
-                                <rect key="frame" x="37" y="318" width="320" height="216"/>
+                                <rect key="frame" x="36.666666666666657" y="318" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fDc-f4-imc"/>
@@ -137,6 +158,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4YW-uN-TDn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timerPickView" destination="0Ls-ec-46P" id="VBZ-vZ-him"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaf-zk-6In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +249,7 @@
         <scene sceneID="FOO-Qq-rLP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zjq-AC-fld" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timer" image="fitness.timer.fill" catalog="system" id="JqX-6g-FeU"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="gauge.with.needle.fill" catalog="system" id="JqX-6g-FeU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4TC-w7-VeA">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -244,10 +268,14 @@
     <resources>
         <image name="alarm.fill" catalog="system" width="123" height="128"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
-        <image name="fitness.timer.fill" catalog="system" width="128" height="123"/>
+        <image name="gauge.with.needle.fill" catalog="system" width="128" height="123"/>
+        <image name="play.fill" catalog="system" width="120" height="128"/>
         <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
