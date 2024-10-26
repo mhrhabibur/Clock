@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xLx-lp-pgm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alarm View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AlarmViewController" customModule="Clock_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cuO-WF-geu">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlarmCell" id="1OB-fg-1No">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="51.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1OB-fg-1No" id="4Qj-Pi-ZNF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="51.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="cuO-WF-geu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bc4-6u-np8"/>
+                            <constraint firstItem="cuO-WF-geu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D9k-rC-J4e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cuO-WF-geu" secondAttribute="bottom" id="OCu-ez-DIf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cuO-WF-geu" secondAttribute="trailing" id="tN7-BA-MRp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0EB-wl-jOH"/>
+                    <connections>
+                        <outlet property="tableView" destination="cuO-WF-geu" id="8Mn-Pp-FOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="204"/>
+        </scene>
+        <!--Clock View Controller-->
+        <scene sceneID="ChD-tl-RyK">
+            <objects>
+                <viewController id="6w9-o8-1fR" customClass="ClockViewController" customModule="Clock_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5tc-Ue-UWt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-Pn-OxQ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClockCell" id="BOs-JH-Owt">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="51.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BOs-JH-Owt" id="SbM-io-mT1">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="51.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tc8-qu-Y2l"/>
+                        <constraints>
+                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="bottom" secondItem="Vfu-Pn-OxQ" secondAttribute="bottom" id="2Sf-kd-ZhH"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="leading" secondItem="Tc8-qu-Y2l" secondAttribute="leading" id="DG6-Fe-z8x"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="top" secondItem="Tc8-qu-Y2l" secondAttribute="top" id="SWw-ok-IxG"/>
+                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="trailing" secondItem="Vfu-Pn-OxQ" secondAttribute="trailing" id="Tz8-DR-ukk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ag1-d2-KUs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vfu-Pn-OxQ" id="zG7-QO-Bpe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YC-Zo-SRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="204"/>
+        </scene>
+        <!--Stopwatch View Controller-->
+        <scene sceneID="jHG-sC-MFp">
+            <objects>
+                <viewController id="hGA-Eq-HFs" customClass="StopwatchViewController" customModule="Clock_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hc0-au-q0G">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJA-e2-OPt">
+                                <rect key="frame" x="98.666666666666686" y="396" width="196" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QCV-Ob-7tl"/>
+                        <constraints>
+                            <constraint firstItem="tJA-e2-OPt" firstAttribute="centerY" secondItem="hc0-au-q0G" secondAttribute="centerY" id="lcj-Jt-A0t"/>
+                            <constraint firstItem="tJA-e2-OPt" firstAttribute="centerX" secondItem="hc0-au-q0G" secondAttribute="centerX" id="sTk-su-3Sm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kkq-7T-kU5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKq-3I-BsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3233" y="204"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="aas-ej-Tpt">
+            <objects>
+                <viewController id="6EL-iB-mwX" customClass="TimerViewController" customModule="Clock_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oYj-wt-Ztr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-ec-46P">
+                                <rect key="frame" x="37" y="318" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fDc-f4-imc"/>
+                        <constraints>
+                            <constraint firstItem="0Ls-ec-46P" firstAttribute="centerY" secondItem="oYj-wt-Ztr" secondAttribute="centerY" id="0hZ-wS-G4O"/>
+                            <constraint firstItem="0Ls-ec-46P" firstAttribute="centerX" secondItem="oYj-wt-Ztr" secondAttribute="centerX" id="GRJ-VZ-QJP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4YW-uN-TDn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaf-zk-6In" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4433" y="204"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dXN-ta-9dS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xLx-lp-pgm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="KjD-Tv-hGc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iaw-ZI-3IU">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="j2s-Ia-pAv" kind="relationship" relationship="viewControllers" id="Lm8-Nf-G2b"/>
+                        <segue destination="TSl-XZ-CbE" kind="relationship" relationship="viewControllers" id="7dk-0e-7K7"/>
+                        <segue destination="EQx-a1-YMX" kind="relationship" relationship="viewControllers" id="1cN-SD-n80"/>
+                        <segue destination="zjq-AC-fld" kind="relationship" relationship="viewControllers" id="fgd-lS-vUU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppx-9o-LHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2564" y="-1375"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="fBh-JR-Na5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j2s-Ia-pAv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alarm" image="alarm.fill" catalog="system" id="kBw-TV-hk8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNd-pP-g80">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1oK-sn-a5V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apK-vd-zfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="-611"/>
+        </scene>
+        <!--Clock-->
+        <scene sceneID="M7a-3l-lb3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TSl-XZ-CbE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Clock" image="clock.fill" catalog="system" id="sDG-L7-Two"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="udR-Jg-m1b">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6w9-o8-1fR" kind="relationship" relationship="rootViewController" id="V07-nV-bAv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Uh-9K-sOc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="-611"/>
+        </scene>
+        <!--Stopwatch-->
+        <scene sceneID="wsd-BQ-KJ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EQx-a1-YMX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="stopwatch.fill" catalog="system" id="SNb-wy-IJ9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WNb-tN-7Ko">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hGA-Eq-HFs" kind="relationship" relationship="rootViewController" id="L7o-lN-17P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ph-Qs-J5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3234" y="-611"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="FOO-Qq-rLP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zjq-AC-fld" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="fitness.timer.fill" catalog="system" id="JqX-6g-FeU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4TC-w7-VeA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6EL-iB-mwX" kind="relationship" relationship="rootViewController" id="IOO-2D-YpS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63r-zC-TnW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4434" y="-611"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alarm.fill" catalog="system" width="123" height="128"/>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <image name="fitness.timer.fill" catalog="system" width="128" height="123"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

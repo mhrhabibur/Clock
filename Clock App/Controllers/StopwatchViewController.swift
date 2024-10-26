@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class StopwatchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = "Stopwatch"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }

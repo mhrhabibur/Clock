@@ -7,12 +7,12 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class TimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        navigationItem.title = "Timer"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
