@@ -23,6 +23,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         navigationController?.navigationBar.prefersLargeTitles = true
         timerPickView.delegate = self
         timerPickView.dataSource = self
+        timerPickView.selectRow(1, inComponent: 1, animated: true)
     }
     
     
@@ -40,7 +41,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
-            return "\(row)"
+            return "\(timerPickerData[row])"
         } else {
             return "\(row)"
         }
