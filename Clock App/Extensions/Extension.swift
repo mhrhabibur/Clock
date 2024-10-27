@@ -15,7 +15,7 @@ extension UIViewController {
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         toastLabel.textAlignment = .center
         toastLabel.font = UIFont.systemFont(ofSize: 16)
-        toastLabel.numberOfLines = 0
+        toastLabel.numberOfLines = 2
         toastLabel.alpha = 0.0
         toastLabel.layer.cornerRadius = 20
         toastLabel.clipsToBounds = true
@@ -33,5 +33,26 @@ extension UIViewController {
                 toastLabel.removeFromSuperview()
             })
         }
+    }
+    
+    
+    // MARK: - Show Alert
+    func showAlert(
+        title: String,
+        message: String,
+        actionTitle: String
+    ) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: actionTitle, style: .default)  { _ in
+            print("Ok Tapped")
+            // method will go here
+        }
+        alert.addAction(action)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
 }

@@ -11,19 +11,21 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
-    
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItem()
         setupTableView()
     }
-    
-    // ???: - Why is it here?
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+
     
+    /// This is really cool things in xCode
+    ///
     // MARK: - Navigation Bar
     private func setupNavigationItem() {
         navigationItem.title = "Alarm"
@@ -35,9 +37,9 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
             action: #selector(addAlarm)
         )
     }
-    
-     @objc private func addAlarm() {
-         self.showToast("Alarm added successfully.")
+
+    @objc private func addAlarm() {
+        self.showToast("Alarm adde successfully")
     }
 
     // MARK: - TableView
@@ -45,35 +47,27 @@ class AlarmViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
     }
-   
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
+        -> Int
+    {
         return 100
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AlarmCell", for: indexPath)
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "AlarmCell", for: indexPath)
         cell.textLabel?.text = "Alarm \(indexPath.row)"
         return cell
     }
-    
-    // MARK: - Show Alert
-    private func showAlert(
-        title: String,
-        message: String,
-        actionTitle: String
+
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
     ) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        let action = UIAlertAction(title: actionTitle, style: .default)  { _ in
-             print("Ok Tapped")
-            // method will go here
-        }
-        alert.addAction(action)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(alert, animated: true)
+        print("ok")
     }
 
 }

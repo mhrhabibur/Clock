@@ -11,18 +11,29 @@ class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupNavigationBar()
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            let date = Date()
+            let formatter = DateFormatter()
+            let timeFormatter = DateFormatter()
+            formatter.dateStyle = .medium
+            timeFormatter.timeStyle = .medium
+            self.timeLabel.text = timeFormatter.string(from: date)
+            self.dateLabel.text = formatter.string(from: date)
+        }
     }
     
     // MARK: - Navigation Bar Setup
     private func setupNavigationBar() {
         navigationItem.title = "Clock"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus"),
             style: .plain,
