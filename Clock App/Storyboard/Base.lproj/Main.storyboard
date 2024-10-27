@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-Pn-OxQ">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="278" width="393" height="491"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ClockCell" id="BOs-JH-Owt">
@@ -70,13 +70,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN2-C9-JvF">
+                                <rect key="frame" x="10" y="103" width="373" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="gMQ-tb-jMI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77V-qU-f6P">
+                                <rect key="frame" x="10" y="198" width="373" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="x2d-jB-zWM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tc8-qu-Y2l"/>
                         <constraints>
-                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="bottom" secondItem="Vfu-Pn-OxQ" secondAttribute="bottom" id="2Sf-kd-ZhH"/>
-                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="leading" secondItem="Tc8-qu-Y2l" secondAttribute="leading" id="DG6-Fe-z8x"/>
-                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="top" secondItem="Tc8-qu-Y2l" secondAttribute="top" id="SWw-ok-IxG"/>
-                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="trailing" secondItem="Vfu-Pn-OxQ" secondAttribute="trailing" id="Tz8-DR-ukk"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="top" secondItem="77V-qU-f6P" secondAttribute="bottom" constant="20" id="5nz-ZS-TPv"/>
+                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="trailing" secondItem="MN2-C9-JvF" secondAttribute="trailing" constant="10" id="7E7-I6-GZs"/>
+                            <constraint firstItem="77V-qU-f6P" firstAttribute="top" secondItem="MN2-C9-JvF" secondAttribute="bottom" constant="20" id="Ai1-Aa-NYR"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="leading" secondItem="Tc8-qu-Y2l" secondAttribute="leading" id="CdH-L2-1Pb"/>
+                            <constraint firstItem="MN2-C9-JvF" firstAttribute="top" secondItem="Tc8-qu-Y2l" secondAttribute="top" id="OQp-gj-G8j"/>
+                            <constraint firstItem="MN2-C9-JvF" firstAttribute="leading" secondItem="Tc8-qu-Y2l" secondAttribute="leading" constant="10" id="Xzx-zM-tb9"/>
+                            <constraint firstItem="Tc8-qu-Y2l" firstAttribute="trailing" secondItem="77V-qU-f6P" secondAttribute="trailing" constant="10" id="bs3-D3-MNq"/>
+                            <constraint firstItem="77V-qU-f6P" firstAttribute="leading" secondItem="Tc8-qu-Y2l" secondAttribute="leading" constant="10" id="ftp-d2-vXc"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="trailing" secondItem="Tc8-qu-Y2l" secondAttribute="trailing" id="ie0-jB-BO9"/>
+                            <constraint firstItem="Vfu-Pn-OxQ" firstAttribute="bottom" secondItem="Tc8-qu-Y2l" secondAttribute="bottom" id="wiw-MZ-bu7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ag1-d2-KUs"/>
@@ -87,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YC-Zo-SRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="204"/>
+            <point key="canvasLocation" x="1710.6870229007634" y="203.52112676056339"/>
         </scene>
         <!--Stopwatch View Controller-->
         <scene sceneID="jHG-sC-MFp">

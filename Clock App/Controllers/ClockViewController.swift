@@ -9,15 +9,20 @@ import UIKit
 
 class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
+    // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        setupNavigationBar()
+    }
+    
+    // MARK: - Navigation Bar Setup
+    private func setupNavigationBar() {
         navigationItem.title = "Clock"
         navigationController?.navigationBar.prefersLargeTitles = true
-        tableView.delegate = self
-        tableView.dataSource = self
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus"),
             style: .plain,
@@ -28,6 +33,13 @@ class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @objc func addAlarm() {
         print("Clock Added Successfully")
+        self.showToast("Clock Added Successfully")
+    }
+    
+    //MARK: - Table View Setup
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,3 +53,5 @@ class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
 }
+
+
