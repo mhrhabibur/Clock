@@ -19,18 +19,23 @@ class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         setupTableView()
         setupNavigationBar()
+        getDateAndTime()
+    }
+    
+    // MARK: - Date & Time
+    private func getDateAndTime() {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             let date = Date()
-            let formatter = DateFormatter()
+            let dateFormatter = DateFormatter()
             let timeFormatter = DateFormatter()
-            formatter.dateStyle = .medium
+            dateFormatter.dateStyle = .medium
             timeFormatter.timeStyle = .medium
             self.timeLabel.text = timeFormatter.string(from: date)
-            self.dateLabel.text = formatter.string(from: date)
+            self.dateLabel.text = dateFormatter.string(from: date)
         }
     }
     
-    // MARK: - Navigation Bar Setup
+    // MARK: - Navigation
     private func setupNavigationBar() {
         navigationItem.title = "Clock"
         navigationController?.navigationBar.prefersLargeTitles = false
@@ -47,7 +52,7 @@ class ClockViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.showToast("Clock Added Successfully")
     }
     
-    //MARK: - Table View Setup
+    //MARK: - Table View
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
